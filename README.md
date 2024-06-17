@@ -1,0 +1,2 @@
+# AngularTradeShield
+Angualr project
