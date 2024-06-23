@@ -1,2 +1,1 @@
-# AngularTradeShield
-Angualr project
+Data Warehouse Concepts
