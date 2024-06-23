@@ -2,8 +2,8 @@ Data Warehouse Concepts
 
 
 **What is Data Warehouse: **
-	A data warehouse is typically built on top of some type of a database, so you can think of a data warehouse as the usage and the database as the platform.
-	It's also important to note that the data inside of a data warehouse comes from elsewhere(Operational system or External Source).
+	A data warehouse is typically built on top of some type of a database, so you can think of a data warehouse as the usage and the database as the platform.<br>
+	It's also important to note that the data inside of a data warehouse comes from elsewhere(Operational system or External Source).<br>
 	we don't create data for the firsttime in data ware house, transaction occur and are recoded in various OS, and their data is subsequently sent down to the data warehouse.
 	Data is copied, not moved. have rules to how we build and orginize our data warehouse.
 		**rule1:** Data from number of different source.
