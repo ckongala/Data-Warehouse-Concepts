@@ -1,0 +1,68 @@
+Building your ETL Design from your ETL Architecture:
+	ETL Architecture vs. Design:
+		Architecture: Overall structure and framework for ETL processes.
+		Design: Detailed implementation, including specific dimension and fact tables, and SCD patterns (Type 1, Type 2, Type 3).
+	Key ETL Design Practices:
+		Limiting Incoming Data, Processing Dimension Tables First, Parallel Processing.
+
+Dimension Table ETL:
+	ETL for dimension tables, focusing on a star schema. ETL for snowflake schemas can be more complex due to dependencies among various dimension tables. Therefore, we'll use a star schema example to illustrate ETL processes more clearly.
+	ETL Process Overview:
+		Data Preparation:
+			Filter incoming data to only new and modified records.
+			Use Change Data Capture (CDC) to detect changes at the source system level.
+		Change Data Capture (CDC):
+			Timestamp Comparison: Most modern relational databases use timestamps to track changes. Compare the row's timestamp with the timestamp of the last ETL run.
+			Database Logs: If timestamps are unavailable, compare data with transaction logs.
+			Direct Comparison: As a last resort, compare incoming data with the existing data warehouse records.
+		Transformation:
+			Apply necessary transformations to standardize and clean the data.
+			Use the common transformation model discussed in ETL architecture.
+		Processing Dimension Tables:
+			New Rows: Insert new rows into dimension tables.
+			Type 1 Changes: Apply in-place updates for minor changes.
+			Type 2 Changes: Add new rows for significant changes, maintaining history.
+
+Process SCD Type 1 Changes to a Dimension Table:
+	This process follows a specific sequence, beginning with data preparation, followed by necessary transformations, and then handling new data by adding surrogate keys. 
+	Once new data is processed, we focus on Type 1 changes before moving on to Type 2 changes.
+	Sequence of Processing:
+		Data Preparation:
+			Limit incoming data to only new and modified records.
+			Perform necessary transformations on the data.
+			For new data, add surrogate keys alongside natural keys and other relevant information.
+		Processing Type 1 Changes:
+			Type 1 changes involve a basic in-place update to correct any data errors, resulting in the loss of previous values.
+			This is typically done using a simple SQL update statement to overwrite old data with new data.
+				
+Process SCD Type 2 Changes to a Dimension Table:
+	Type 2 changes involve capturing historical data by adding new rows instead of updating existing ones. This allows us to track changes over time.
+	Steps for Type 2 Changes:
+	Incoming Data:
+		Identify the natural key (e.g., Student_ID: TYOUN21) from the incoming data.
+	Generate New Surrogate Key:
+		Use the natural key to guide the generation of a new surrogate key within the data warehouse.
+	Insert New Row:
+		Add the new row with the updated information and the newly generated surrogate key.
+
+Design ETL for Fact Tables:
+	Fact Tables in ETL:
+		Fact tables store quantitative data for analysis and typically use a basic append model for ETL. However, there are nuances that we need to address.
+
+	ETL Process Overview:
+		Process Dimension Tables First:
+			Ensure all new and modified data in dimension tables is processed, including handling Type 1 and Type 2 changes.
+			Verify that any new surrogate keys generated during the dimension processing are available for use in the fact tables.
+		Fact Table ETL:
+			Use the basic append model to add new rows to the fact tables.
+			Address complications such as ensuring correct surrogate key assignment from dimension tables.
+	Key Takeaways:
+		Relevant Date Usage:
+			Use the payment or transaction date to determine the correct surrogate key from the dimension table.
+		Handling Multiple Versions:
+			Ensure accurate surrogate key assignment by considering the effective and expiration dates.
+		ETL Tool Assistance:
+			Utilize ETL tools to streamline the process, leveraging built-in functions for handling Type 1, Type 2, and other changes.
+	Processing fact tables involves more than just appending new data; 
+it requires careful consideration of the corresponding dimension data to ensure accurate historical tracking and data integrity.
+	By understanding these complexities and using appropriate tools, you can effectively manage ETL processes in a data warehouse environment.
