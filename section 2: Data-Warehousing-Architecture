@@ -1,7 +1,7 @@
 
 Data Warehousing Architecture:
 
-	Centralized Data Warehouse:
+	**Centralized Data Warehouse:**
 		Centralized Data Warehouse: Uses a single database to support business intelligence and analytics.
 		
 	Data Marts:
