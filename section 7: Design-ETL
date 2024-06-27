@@ -63,6 +63,6 @@ Design ETL for Fact Tables:
 			Ensure accurate surrogate key assignment by considering the effective and expiration dates.
 		ETL Tool Assistance:
 			Utilize ETL tools to streamline the process, leveraging built-in functions for handling Type 1, Type 2, and other changes.
-	Processing fact tables involves more than just appending new data; 
+	Processing fact tables involves more than just appending new data:
 it requires careful consideration of the corresponding dimension data to ensure accurate historical tracking and data integrity.
 	By understanding these complexities and using appropriate tools, you can effectively manage ETL processes in a data warehouse environment.
