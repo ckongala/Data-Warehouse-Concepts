@@ -4,7 +4,7 @@ Decide what you are Data Warehouse will be used for:
 		The Past: Historical analysis to understand trends and patterns.
 		The Present: Real-time or near real-time analysis to monitor current operations.
 		The Future: Predictive analytics to forecast future outcomes.
-		The Unknown: Exploratory analytics to discover new insights
+		The Unknown: Exploratory analytics to discover new insights.
 		
 	Synergy Between BI and Data Warehousing:
 		Business intelligence (BI) and data warehousing emerged simultaneously, influencing and driving each other's growth. 
@@ -26,8 +26,8 @@ Decide what you are Data Warehouse will be used for:
 		Data Lakes: To store vast amounts of raw data in its native format.
 	Design Engineering and Dimensional Modeling:
 		In the context of dimensional modeling, we'll explore:
-		Fact Tables: Central tables that contain quantitative data for analysis.
-		Dimension Tables: Surrounding tables that describe the dimensions (attributes) related to the facts.
+			Fact Tables: Central tables that contain quantitative data for analysis.
+			Dimension Tables: Surrounding tables that describe the dimensions (attributes) related to the facts.
 
 The Basic principles of Dimensionality:
 
