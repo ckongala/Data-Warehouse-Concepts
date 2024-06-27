@@ -15,7 +15,7 @@
 		Data warehouse helps us make decisions based on data.
 		We need a view into the past, present, and future (or what we predict about the future) in different areas of our organization.
 		It even allows us to explore the unknown by using powerful analytics to discover interesting and important insights from large amounts of data.
-**	2. One-Stop Shopping:**
+	**2. One-Stop Shopping:**
 		All necessary data is stored in one location rather than being scattered across various transactional and operational applications.
 		This simplifies data-driven decision-making, which used to be tedious and problematic due to data being spread out.
 	When we combine these views of our business data, we have what is known as Business Intelligence (BI).
