@@ -102,7 +102,7 @@ periodic snapshots and semi-additive facts:
 	Semi-Additive Facts: Essential for certain types of analysis in periodic snapshot fact tables.
 	Operations: Cannot be summed over time but can be averaged or summed within a specific time period.
 	Use Case: Periodic snapshot fact tables are invaluable for measuring and analyzing regular levels over time, 
-				such as end-of-week balances or periodic measurements in non-transactional scenarios.
+		  such as end-of-week balances or periodic measurements in non-transactional scenarios.
 
 Role of Accumulating Snapshot Fact Tables:
 	The accumulating snapshot fact table. This type is used to track the progress of a business process with formally defined stages.
@@ -132,7 +132,8 @@ Fact Tables Comparison of Star schema vs snowflake Schema:
 	Hierarchical Data in Fact Tables: In a data warehouse, we often deal with hierarchical data.
 	Star Schema for Fact Tables: In a star schema, the hierarchical information is consolidated into a single dimension table.
 	Snowflake Schema for Fact Tables: In a snowflake schema, the hierarchical data is normalized into multiple dimension tables. 
-	Efficient Design for Snowflake Schema Fact Tables
+	Efficient Design for Snowflake Schema Fact Tables:
+
 		Instead of including multiple foreign keys, we follow a similar approach to the star schema:
 			Include only the lowest level foreign key (Faculty_Key) in the fact table.
 			Use the relationships defined in the dimension tables to navigate the hierarchy.
