@@ -1,4 +1,3 @@
-
 Compare ETL to ELT:
 	ETL: Extract, Transform, Load
 		Extract:
@@ -15,7 +14,7 @@ Compare ETL to ELT:
 			Requires significant business analysis and data modeling before data storage.
 			A lot of preparatory work is needed to ensure data integrity and usability.
 			
-	ELT: Extract, Load, Transform
+	ELT: Extract, Load, Transform:
 		Extract:
 			Pull data from various source applications, similar to ETL.
 			Collect data in its rawest form, regardless of structure (structured, semi-structured, unstructured).
@@ -44,7 +43,7 @@ Compare ETL to ELT:
 	Understanding the differences and applications of ETL and ELT allows organizations to choose the best approach for their data processing needs.
 
 Design the Initial Load ETL:
-	Initial Loading ETL
+	Initial Loading ETL:
 		Overview:
 			Initial Loading ETL is typically a one-time process performed before a data warehouse goes live.
 			The primary goal is to gather all the necessary data to get the data warehouse up and running.
@@ -68,7 +67,7 @@ Design the Initial Load ETL:
 			One-Time Process: Initial Loading ETL is typically performed once. However, it might need to be redone in specific scenarios:
 				Data Warehouse Issues: If the data warehouse is corrupted or re-platformed.
 				Complete Overhaul: When a significant redesign or overhaul of the data warehouse is required.
-	Incremental ETL
+	Incremental ETL:
 		Overview:
 			Incremental ETL is used to keep the data warehouse up to date after the initial loading.
 			This process involves regularly updating the data warehouse with new and updated data from source systems.
@@ -82,7 +81,7 @@ Design the Initial Load ETL:
 	Following the initial load, Incremental ETL processes are used to keep the data warehouse up to date, ensuring continuous availability of fresh data for analytical purposes.
 
 Compare Different Models for Incremental ETL:
-	Incremental ETL
+	Incremental ETL:
 	Overview:
 		Incremental ETL is performed regularly to update the data warehouse with new, modified, and deleted data.
 		This process ensures the data warehouse remains current, reflecting the latest changes from the source systems.
@@ -93,7 +92,7 @@ Compare Different Models for Incremental ETL:
 	purpose:
 		The main goal of incremental ETL is to keep the data warehouse up to date. It balances the need for non-volatility (ensuring static data during strategic planning) with the need for current info.
 		
-	Incremental ETL Patterns
+	Incremental ETL Patterns:
 		There are four major patterns used in incremental ETL:
 		Append Pattern:
 			New data is added to the existing tables without altering the existing records.
@@ -118,7 +117,7 @@ Explore the role of Data Transformation:
 	By unifying data values, types, sizes, and eliminating duplicates, we ensure the data is consistent and reliable for business intelligence and analytics. 
 	Understanding these transformation models and applying them effectively is crucial for building robust data warehousing solutions. 
 
-	Goals of Data Transformation
+	Goals of Data Transformation:
 		1. Uniformity: Ensure that data from various sources looks consistent, allowing for accurate comparisons and analyses.
 		2. Restructuring: Organize raw data from the staging layer into a well-engineered set of data structures suitable for the data warehouse.
 		
