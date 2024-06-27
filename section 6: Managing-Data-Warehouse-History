@@ -1,4 +1,3 @@
-
 Slowly Changing Dimensions(SCDs) and Data Warehouse History:
 	crucial for managing historical data. SCDs allow us to handle changes in dimension data over time, which is essential for maintaining the time-variant nature of a data warehouse.
 	Type 1 SCD: 
